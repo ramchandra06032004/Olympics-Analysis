@@ -136,5 +136,30 @@ if user_menu=="Athlete-Wise Analysis":
     final.rename(columns={"count_x":"Male","count_y":"Female"},inplace=True)
     fig = px.line(final, x="Year", y=["Male", "Female"])
     st.plotly_chart(fig)
-    
+
+st.markdown("""
+    <style>
+    .reportview-container .main .block-container {
+        max-width: 100%;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+footer = """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #0e1117;
+        color: white;
+        text-align: center;
+    }
+    </style>
+    <div class="footer">
+    <p>Copyright © 2024 Ramchandra Mulik. All rights reserved.</p>
+    </div>
+    """
+st.markdown(footer, unsafe_allow_html=True)
     
